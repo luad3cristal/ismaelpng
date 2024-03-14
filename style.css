@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --stroke-color: rgba(143, 143, 143, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.01);
+  --highlight-color: rgba(255, 255, 255, 0.01);
+}
+
+body {
+  background-image: url(./assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 24px;
+}
+
+/* perfil */
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  border-radius: 50%;
+  border: 2px transparent solid;
+  outline: 3px black solid;
+}
+
+.profile h3 {
+  font-size: 19px;
+  font-weight: 700;
+
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.profile p {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* links */
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  height: 70px;
+  padding: 16px 70px 16px 100px;
+
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+
+  transition: background 0.2s;
+}
+
+/* transition */
+ul li a:hover {
+  background-color: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+ul li img {
+  position: fixed;
+  left: 10px;
+}
+
+/* social-links*/
+.social-links {
+  display: flex;
+  justify-content: center;
+
+  font-size: 24px;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px;
+
+  color: var(--text-color);
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+.social-links a:hover {
+  background: white;
+}
+
+@media (max-width: 485px) {
+  .profile img {
+    width: 160px;
+  }
+  .profile h3 {
+    font-size: 18px;
+  }
+  .profile p {
+    font-size: 14px;
+  }
+
+  ul li a {
+    font-size: 13px;
+    padding: 16px 30px 16px 75px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 309px) {
+  ul li a img {
+    display: none;
+  }
+
+  ul li a {
+    font-size: 13px;
+    padding: 16px 30px;
+  }
+}
