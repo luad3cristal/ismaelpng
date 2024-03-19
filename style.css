@@ -135,6 +135,11 @@ ul li img {
 }
 
 @media (max-width: 485px) {
+  body {
+    /* background: none; */
+    background-size: auto auto;
+  }
+
   .profile img {
     width: 160px;
   }
